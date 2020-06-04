@@ -1260,20 +1260,17 @@ Look in <a href="#payment-url-host-to-host">Same as in url.</a>
 </span>   <span class="nv">$orderData</span> <span class="o">=</span> <span class="nx">Cloudipsp\Pcidss</span><span class="o">::</span><span class="na">start</span><span class="p">(</span><span class="nv">$TestOrderData</span><span class="p">);</span>
    <span class="k">if</span><span class="p">(</span><span class="nv">$orderData</span><span class="o">-&gt;</span><span class="na">is3ds</span><span class="p">())</span>
       <span class="nv">$form</span> <span class="o">=</span> <span class="nx">\Cloudipsp\Pcidss</span><span class="o">::</span><span class="na">get3dsFrom</span><span class="p">(</span><span class="nv">$orderData</span><span class="o">-&gt;</span><span class="na">getData</span><span class="p">(),</span> <span class="nv">$response_url</span> <span class="o">.</span> <span class="s1">'response_url'</span><span class="p">);</span>
-      <span class="c1">// or $orderData-&gt;get3dsFormContent('response_url')
-</span></code></pre>
+</code></pre>
 <aside class="warning"><p class="nothing">
 Only for PCIDSS compliant merchants.<br/>
 If card is 3ds a merchant receiving this response must build an HTML form and using it submit customer to acs_url.
-</p></aside>     
+</p></aside>
 
 <p><code>(array)</code> <span class="green">getData()</span> — returns payment data.</p>
 
 <p><code>(bool)</code> <span class="green">is3ds()</span> — check if is 3ds response.</p>
 
 <p><code>(string)</code> <span class="green">get3dsFrom($responseData, &#39;response_url&#39;)</span> — generating form for step two if 3ds response.</p>
-
-<p><code>(string)</code> <span class="green">get3dsFormContent(&#39;response_url&#39;)</span> — generating form request for step two if 3ds response.</p>
 
 <p>Required request Parameters:</p>
 
@@ -1325,7 +1322,7 @@ If card is 3ds a merchant receiving this response must build an HTML form and us
 
 <ul>
 <li>form</li>
-<li>xml </li>
+<li>xml</li>
 <li>json</li>
 </ul>
 <h2 id='step-two'>Step Two</h2>
@@ -1351,7 +1348,7 @@ If card is 3ds a merchant receiving this response must build an HTML form and us
 
 <ul>
 <li>form</li>
-<li>xml </li>
+<li>xml</li>
 <li>json</li>
 </ul>
 <h1 id='card-verification'>Card verification</h1><h2 id='payment-card-verification-url'>Payment card verification url</h2>
