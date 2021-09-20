@@ -284,6 +284,9 @@
                   <li>
                     <a href="#subscription-token" class="toc-h2 toc-link" data-title="subscription-token">Subscription token</a>
                   </li>
+                  <li>
+                    <a href="#subscription-stop" class="toc-h2 toc-link" data-title="subscription-stop">Subscription stop</a>
+                  </li>
               </ul>
           </li>
           <li>
@@ -1238,6 +1241,21 @@ Response is always returned in request context in the same content-type. So if r
 <aside class="notice">
 Look in <a href="#payment-url-host-to-host">Same as in url.</a>
 </aside>
+<h2 id='subscription-stop'>Subscription stop</h2>
+<blockquote>
+<p>Example:</p>
+</blockquote>
+<pre class="highlight php tab-php"><code>
+<span class="cp">&lt;?php</span>
+  <span class="k">require</span> <span class="s1">'vendor/autoload.php'</span><span class="p">;</span>
+
+  <span class="nx">\Cloudipsp\Configuration</span><span class="o">::</span><span class="na">setMerchantId</span><span class="p">(</span><span class="mi">1396424</span><span class="p">);</span>
+  <span class="nx">\Cloudipsp\Configuration</span><span class="o">::</span><span class="na">setSecretKey</span><span class="p">(</span><span class="s1">'test'</span><span class="p">);</span>
+  <span class="nx">\Cloudipsp\Configuration</span><span class="o">::</span><span class="na">setApiVersion</span><span class="p">(</span><span class="s1">'2.0'</span><span class="p">);</span>
+  <span class="nv">$cancel</span> <span class="o">=</span> <span class="nx">Cloudipsp\Subscription</span><span class="o">::</span><span class="na">stop</span><span class="p">(</span><span class="nv">$order_id</span><span class="p">);</span>
+
+</code></pre>
+<p><code>(array)</code> Returns info about calendar status.</p>
 <h1 id='pcidss-accept-purchase'>PCIDSS Accept purchase</h1><h2 id='step-one'>Step One</h2>
 <blockquote>
 <p>Example 3ds card:</p>
